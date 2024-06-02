@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BazaRPL - CHINCHURROS</title>
+    <link rel="icon" href="assets/images/icon-logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+    <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-1.7.1.min.js"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+    @font-face { font-family: VT323; src: url('../assets/fonts/VT323-Regular.ttf'); } 
+    *{
+      font-family: "VT323", monospace;
+    }
+    [x-cloak] { display: none; }
+    #btn-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+  </style>
+</head>
+<body>
+    <!-- Button back to top -->
+    <a id="btn-to-top" class="bg-[#e62310] border-2 w-8 h-8 rounded-3xl fixed bottom-5 right-5 opacity-0 invisible transition-all duration-500 z-50 pointer active:scale-90 animate-bounce cursor-pointer" title="Back To Top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-up-short text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+        </svg>
+      </a>
+
+      <div class="flex justify-center">
+        <div class="absolute content-[''] h-3 w-[.1rem] bg-[#009bd9] bg-opacity-50 left-[32%] sm:left-[38%] md:left-[45%]"></div>
+         <div class="absolute content-[''] h-3 w-[.1rem] bg-[#009bd9] bg-opacity-50 right-[32%] sm:right-[38%] md:right-[45%]"></div>
+          <nav class="bg-white bg-opacity-40 border-2 border-[#009bd9] border-opacity-50 shadow py-2 sm:py-3 px-6 sm:px-7 m-3 rounded-full w-[20rem] sm:w-[21rem] animate__animated animate__fadeInDown">
+              <div class="flex items-center justify-between">
+                  <a href="" class="text-3xl text-[#e62310] font-bold drop-shadow-[0_1.5px_1.5px_rgba(255,255,255,0.8)] tracking-wide">BazaRPL</a>
+                  <div class="flex items-center gap-2">
+                    <div class="flex gap-4">
+                      <a href="../index.html#about" class="relative text-lg tracking-wide before:absolute before:content-[''] before:bottom-0 before:left-1/4 before:bg-[#009bd9] before:w-1/4 before:h-[.1rem] before:transition-all before:hover:left-0 before:hover:w-1/2 after:absolute after:content-[''] after:bottom-0 after:right-1/4 after:bg-[#009bd9] after:w-1/4 after:h-[.1rem] after:transition-all after:hover:right-0 after:hover:w-1/2">About</a>
+                      <a href="../index.html#product" class="relative text-lg tracking-wide before:absolute before:content-[''] before:bottom-0 before:left-1/4 before:bg-[#009bd9] before:w-1/4 before:h-[.1rem] before:transition-all before:hover:left-0 before:hover:w-1/2 after:absolute after:content-[''] after:bottom-0 after:right-1/4 after:bg-[#009bd9] after:w-1/4 after:h-[.1rem] after:transition-all after:hover:right-0 after:hover:w-1/2">Produk</a>
+                    </div>
+                    <hr class="border border-[#e62310] rounded-full h-5">
+                    <a href="#" id="main-audio-toggle">
+                      <svg id="volume-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-up" viewBox="0 0 16 16">
+                        <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/>
+                        <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/>
+                        <path d="M10.025 8a4.5 4.5 0 0 1-1.318 3.182L8 10.475A3.5 3.5 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.5 4.5 0 0 1 10.025 8M7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11"/>
+                      </svg>
+                      <!-- Main Sound - Audio -->
+                      <audio id="main-audio" loop>
+                        <source src="../assets/sounds/main-sound.mp3" type="audio/ogg">
+                        <source src="../assets/sounds/main-sound.mp3" type="audio/mpeg">
+                      </audio>
+                    </a>
+                  </div>
+              </div>
+            </nav>
+      </div>
+      </div>
+    <div class="antialiased">
+        <div class="py-6">
+            <!-- Breadcrumbs -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center space-x-2 text-gray-400 text-sm">
+                    <a href="../index.html" class="hover:underline hover:text-gray-600">Home</a>
+                    <span>
+                        <svg class="h-5 w-5 leading-none text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                    <a href="../index.html#product" class="hover:underline hover:text-gray-600">Product</a>
+                    <span>
+                        <svg class="h-5 w-5 leading-none text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                    <span>Churros</span>
+                </div>
+            </div>
+            <!-- ./ Breadcrumbs -->
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+                <div class="flex flex-col md:flex-row -mx-4">
+                    <div class="md:flex-1 px-4">
+                        <div x-data="{ image: 'chinchurros' }" x-cloak>
+                            <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+                                <template x-if="image === 'chinchurros'">
+                                    <img src="../assets/images/chinchurros.jpg" alt="Image 1" class="h-64 md:h-80 rounded-lg">
+                                </template>
+                                <template x-if="image === 'image2'">
+                                    <img src="../assets/images/image2.jpg" alt="Image 2" class="h-64 md:h-80 rounded-lg">
+                                </template>
+                                <template x-if="image === 'image3'">
+                                    <img src="../assets/images/image3.jpg" alt="Image 3" class="h-64 md:h-80 rounded-lg">
+                                </template>
+                                <template x-if="image === 'image4'">
+                                    <img src="../assets/images/image4.jpg" alt="Image 4" class="h-64 md:h-80 rounded-lg">
+                                </template>
+                            </div>
+
+                            <div class="flex -mx-2 mb-4">
+                                <template x-for="(img, i) in ['chinchurros', 'image2', 'image3', 'image4']" :key="i">
+                                    <div class="flex-1 px-2">
+                                        <button @click="image = img" :class="{ 'border-2 border-[#009bd9]': image === img }" class="focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
+                                            <img :src="'../assets/images/' + img + '.jpg'" :alt="'Image ' + (i + 1)" class="h-full w-full object-cover rounded-lg">
+                                        </button>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:flex-1 px-4">
+                        <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">Churros</h2>
+                        <p class="text-gray-500 text-sm">By <span class="text-[#44af35]">CHINCHURROS</span></p>
+
+                        <div class="flex items-center space-x-4 my-4">
+                            <div>
+                                <div class="rounded-lg bg-gray-100 flex py-2 px-3">
+                                    <span class="text-[#e62310] mr-1 mt-1">Rp</span>
+                                    <span class="font-bold text-[#e62310] text-3xl">8K-10K</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-gray-400 text-sm">1 BOX Dengan 1 Dipping Saus <span class="text-[#e62310]">8K</span></p>
+                                <p class="text-gray-400 text-sm">1 BOX Dengan 2 Dipping Saus <span class="text-[#e62310]">10K</span></p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-500">Di churros kami memiliki 3 variasi dipping saus ⤵️
+                          <p class="text-gray-500">
+                            1️⃣Oreo
+                          </p>
+                          <p class="text-gray-500">
+                            2️⃣Susu Milo
+                          </p>
+                          <p class="text-gray-500">
+                            3️⃣Tiramisu</p>
+                          </p>
+
+                        <div class="flex relative py-4">
+                            <a href="" class="relative flex items-center h-14 px-6 py-2 font-semibold rounded-xl bg-[#44af35] transition-all hover:bg-[#009bd9] text-white text-lg">
+                                <img src="../assets/images/wa-icon.png" alt="" class="w-8"> &nbsp; <span>Beli / Bertanya</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/sound.js"></script>
+    <script src="../JS/backToTop.js"></script>
+</body>
+</html>
