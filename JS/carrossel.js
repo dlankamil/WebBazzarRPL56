@@ -60,13 +60,13 @@ const calculateFov = (carrosselProps) => {
 const getPosX = (x) => {
   currentMousePos = x;
 
-  moveTo = currentMousePos < lastMousePos ? moveTo - 2 : moveTo + 2;
+  moveTo = currentMousePos < lastMousePos ? moveTo - 4 : moveTo + 4; // Ditingkatkan dari 2 menjadi 4
 
   lastMousePos = currentMousePos;
 };
 
 const update = () => {
-  lastMoveTo = lerp(moveTo, lastMoveTo, 0.05);
+  lastMoveTo = lerp(moveTo, lastMoveTo, 0.1); // Dikurangi dari 0.05 menjadi 0.1
   carrossel.style.setProperty("--rotatey", lastMoveTo + "deg");
 
   requestAnimationFrame(update);
