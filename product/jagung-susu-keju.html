@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BazaRPL - CHINCHURROS</title>
+    <title>BazaRPL - FLAVOUR ODYSSEY</title>
     <link rel="icon" href="../assets/images/icon-logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
@@ -81,7 +81,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </span>
-                    <span class="text-base sm:text-lg">Churros</span>
+                    <span class="text-base sm:text-lg">Jagung Susu Keju</span>
                 </div>
             </div>
             <!-- ./ Breadcrumbs -->
@@ -92,16 +92,16 @@
                         <div x-data="{ image: '1' }" x-cloak>
                             <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
                                 <template x-if="image === '1'">
-                                    <img src="../assets/images/churros/1.jpg" alt="Foto Produk" class="h-64 md:h-80 rounded-lg">
+                                    <img src="../assets/images/flavour-odyssey/1.jpg" alt="Foto Produk" class="h-64 md:h-80 rounded-lg">
                                 </template>
                                 <template x-if="image === '2'">
-                                    <img src="../assets/images/churros/2.jpg" alt="Poster Produk" class="h-64 md:h-80 rounded-lg">
+                                    <img src="../assets/images/flavour-odyssey/2.jpg" alt="Poster Produk" class="h-64 md:h-80 rounded-lg">
                                 </template>
                                 <template x-if="image === '3'">
-                                    <img src="../assets/images/churros/3.jpg" alt="Stiker" class="h-64 md:h-80 rounded-lg">
+                                    <img src="../assets/images/flavour-odyssey/3.jpg" alt="Stiker" class="h-64 md:h-80 rounded-lg">
                                 </template>
                                 <template x-if="image === '4'">
-                                    <img src="../assets/images/image4.jpg" alt="No Image" class="h-64 md:h-80 rounded-lg">
+                                    <img src="../assets/images/flavour-odyssey/4.jpg" alt="No Image" class="h-64 md:h-80 rounded-lg">
                                 </template>
                             </div>
 
@@ -109,7 +109,7 @@
                                 <template x-for="(img, i) in ['1', '2', '3', '4']" :key="i">
                                     <div class="flex-1 px-2">
                                         <button @click="image = img" :class="{ 'border-[3px] border-indigo-500 rounded-lg': image === img }" class="w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
-                                            <img :src="'../assets/images/churros/' + img + '.jpg'" :alt="'No Image ' + (i + 1)" class="h-full w-full object-cover rounded-lg">
+                                            <img :src="'../assets/images/flavour-odyssey/' + img + '.jpg'" :alt="'No Image ' + (i + 1)" class="h-full w-full object-cover rounded-lg">
                                         </button>
                                     </div>
                                 </template>
@@ -117,14 +117,14 @@
                         </div>
                     </div>
                     <div class="md:flex-1 px-4">
-                        <h2 class="mb-2 leading-tight tracking-wide font-bold text-gray-800 text-2xl sm:text-3xl md:text-4xl">Churros</h2>
-                        <p class="text-gray-500 text-sm md:text-base">By <span class="text-[#009bd9]">Chinchurros</span></p>
+                        <h2 class="mb-2 leading-tight tracking-wide font-bold text-gray-800 text-2xl sm:text-3xl md:text-4xl">Jagung Susu Keju</h2>
+                        <p class="text-gray-500 text-sm md:text-base">By <span class="text-[#009bd9]">Flavour Odyssey</span></p>
 
                         <div class="flex items-center my-4 gap-4">
                             <div>
                                 <div class="rounded-lg bg-gray-100 flex py-2 px-3">
                                         <span class="text-[#e62310] mr-1 mt-1">Rp</span>
-                                        <span class="font-bold text-[#e62310] text-3xl">8K - 10K</span>
+                                        <span class="font-bold text-[#e62310] text-3xl">5k - 6K</span>
                                 </div>
                             </div>
                             <div class="flex flex-1">
@@ -132,23 +132,24 @@
                             </div>
                         </div>
 
-                        <p class="text-gray-500 tracking-wide">Di churros kami memiliki 3 variasi dipping saus ⤵️
+                        <p class="text-gray-500 tracking-wide">
+                            Yuklah cobain gimana rasanya jasuke dan topping lain nya. taburan gurihnya keju parut dan jagung manis yang nikmat!
                             <br>
-                            1️⃣ Oreo
+                            + Topping 1k
                             <br>
-                            2️⃣ Susu Milo
+                            - strawberry
                             <br>
-                            3️⃣ Tiramisu
-                            <br>    
-                            Dengan seharga : 
+                            - oreo
                             <br>
-                            1 BOX Dengan 1 Dipping Saus 8K
+                            - mesis
                             <br>
-                            1 Box Dengan 2 Dipping Saus 10k
-                            <br>                    
-                            Yuk tunggu apalagi? mari order produk kami pada contach person dibawah ini 👇🏻</p>
+                            - milo
+                            <br>
+                            📞Info lebih lanjut hub :
+                        </p>
+
                         <div class="flex relative py-5">
-                            <a href="https://me-qr.com/50RZNJbL" class="relative flex items-center h-14 px-6 py-2 font-semibold rounded-xl bg-[#44af35] transition-all hover:bg-[#009bd9] text-white text-lg tracking-wider animate-bounce">
+                            <a href="https://wa.me/6285780342563" class="relative flex items-center h-14 px-6 py-2 font-semibold rounded-xl bg-[#44af35] transition-all hover:bg-[#009bd9] text-white text-lg tracking-wider animate-bounce">
                                 <img src="../assets/images/wa-icon.png" alt="" class="w-8"> &nbsp; <span>Beli / Bertanya</span>
                             </a>
                         </div>
