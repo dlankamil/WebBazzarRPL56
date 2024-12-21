@@ -100,13 +100,10 @@
                                 <template x-if="image === '3'">
                                     <img src="../assets/images/mochi-moo/3.jpg" alt="Stiker" class="h-64 md:h-80 rounded-lg">
                                 </template>
-                                <template x-if="image === '4'">
-                                    <img src="../assets/images/image4.jpg" alt="No Image" class="h-64 md:h-80 rounded-lg">
-                                </template>
                             </div>
 
                             <div class="flex -mx-2 mb-4">
-                                <template x-for="(img, i) in ['1', '2', '3', '4']" :key="i">
+                                <template x-for="(img, i) in ['1', '2', '3']" :key="i">
                                     <div class="flex-1 px-2">
                                         <button @click="image = img" :class="{ 'border-[3px] border-indigo-500 rounded-lg': image === img }" class="w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
                                             <img :src="'../assets/images/mochi-moo/' + img + '.jpg'" :alt="'No Image ' + (i + 1)" class="h-full w-full object-cover rounded-lg">
