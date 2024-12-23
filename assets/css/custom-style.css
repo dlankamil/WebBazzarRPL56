@@ -12,7 +12,7 @@
 .animate-scroll-text {
   animation: animate-scroll-text linear forwards;
   animation-timeline: view();
-  animation-range: entry 10%;
+  animation-range: entry 0%;
 }
 
 @keyframes animate-scroll-text {
