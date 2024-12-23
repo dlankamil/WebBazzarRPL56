@@ -1,0 +1,46 @@
+#btn-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.animate-scroll-text {
+  animation: animate-scroll-text linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5%;
+}
+
+@keyframes animate-scroll-text {
+  0% {
+    opacity: 0%;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* .product-main:hover .animate-scroll-product:not(:hover) {
+  
+} */
+
+.animate-scroll-product {
+  animation: animate-scroll-product linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+.animate-scroll-product:hover{
+  scale: 1.03;
+}
+
+@keyframes animate-scroll-product {
+  0% {
+    opacity: 0%;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
