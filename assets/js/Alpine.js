@@ -1,3 +1,3 @@
-import Alpine from '../../node_modules/alpinejs/dist/module.esm.js';
+import Alpine from 'alpinejs';
 window.Alpine = Alpine;
 Alpine.start();
