@@ -3,6 +3,12 @@
   visibility: visible;
 }
 
+.bg-mario {
+  height: 100vh;
+  min-height: -webkit-fill-available; /* Fallback untuk iOS */
+  overflow: hidden;
+}
+
 .animate-scroll-text {
   animation: animate-scroll-text linear forwards;
   animation-timeline: view();

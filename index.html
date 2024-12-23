@@ -12,7 +12,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
-<body class="bg-blue-50 overflow-x-hidden h-dvh">
+<body class="bg-blue-50 overflow-x-hidden">
     <!-- Button back to top -->
     <a id="btn-to-top" class="bg-[#e62310] border-2 w-8 h-8 rounded-3xl fixed bottom-5 right-5 opacity-0 invisible transition-all duration-500 z-50 pointer active:scale-90 animate-bounce cursor-pointer" title="Back To Top">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-up-short text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" viewBox="0 0 16 16">
@@ -21,10 +21,33 @@
         </svg>
       </a>
 
-    <div class="h-dvh relative flex justify-center items-center bg-[url('../assets/images/bg-mario-1.jpg')] bg-cover bg-no-repeat bg-center w-full">
-      <!-- <div class="absolute content-[''] h-3 w-[.1rem] bg-white bg-opacity-50 left-[32%] sm:left-[38%] md:left-[45%]"></div>
+    <div class="bg-mario relative bg-[url('../assets/images/bg-mario-1.jpg')] bg-cover bg-no-repeat bg-center w-full">
+      <div class="absolute content-[''] h-3 w-[.1rem] bg-white bg-opacity-50 left-[32%] sm:left-[38%] md:left-[45%]"></div>
       <div class="absolute content-[''] h-3 w-[.1rem] bg-white bg-opacity-50 right-[32%] sm:right-[38%] md:right-[45%]"></div>
-      
+      <div class="grid place-items-center">
+        <nav class="bg-white bg-opacity-40 border border-white border-opacity-50 shadow py-2 sm:py-3 px-6 sm:px-7 m-3 rounded-full w-[19rem] sm:w-[21rem] animate__animated animate__fadeInDown">
+          <div class="flex items-center justify-between">
+              <a href="" class="text-3xl text-[#e62310] font-bold drop-shadow-[0_1.5px_1.5px_rgba(255,255,255,0.8)] tracking-wide">BazaRPL</a>
+              <div class="flex items-center gap-2">
+                <div class="flex gap-4">
+                  <a href="#about" class="relative text-lg tracking-wide before:absolute before:content-[''] before:bottom-0 before:left-1/4 before:bg-[#009bd9] before:w-1/4 before:h-[.1rem] before:transition-all before:hover:left-0 before:hover:w-1/2 after:absolute after:content-[''] after:bottom-0 after:right-1/4 after:bg-[#009bd9] after:w-1/4 after:h-[.1rem] after:transition-all after:hover:right-0 after:hover:w-1/2">About</a>
+                  <a href="#product" class="relative text-lg tracking-wide before:absolute before:content-[''] before:bottom-0 before:left-1/4 before:bg-[#009bd9] before:w-1/4 before:h-[.1rem] before:transition-all before:hover:left-0 before:hover:w-1/2 after:absolute after:content-[''] after:bottom-0 after:right-1/4 after:bg-[#009bd9] after:w-1/4 after:h-[.1rem] after:transition-all after:hover:right-0 after:hover:w-1/2">Produk</a>
+                </div>
+                <hr class="border border-[#e62310] rounded-full h-5">
+                <a href="javascript:void(0)" id="main-audio-toggle">
+                  <svg id="volume-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-volume-mute" viewBox="0 0 16 16">
+                    <path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06M6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/>
+                  </svg>
+                  <!-- Main Sound - Audio -->
+                  <audio id="main-audio" loop>
+                    <source src="assets/sounds/main-sound.mp3" type="audio/ogg">
+                    <source src="assets/sounds/main-sound.mp3" type="audio/mpeg">
+                  </audio>
+                </a>
+              </div>
+          </div>
+          </nav>
+        </div>
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
           <div class="grid place-items-center gap-3">
             <h1 class="text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-neutral-50 font-bold tracking-wider drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,0.8)] animate__animated animate__zoomIn">Welcome To BazaRPL!</h1>
@@ -33,7 +56,7 @@
               <img src="assets/images/start.png" alt="" class="w-28 sm:w-32 md:w-36">
             </a>
           </div>
-        </div> -->
+        </div>
       </div>
 
       <!-- About -->
