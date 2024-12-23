@@ -3,7 +3,7 @@
   visibility: visible;
 }
 
-.bg-mario {
+.bg-vh {
   height: 100vh;
   min-height: -webkit-fill-available; /* Fallback untuk iOS */
   overflow: hidden;
