@@ -6,7 +6,7 @@
 .bg-vh {
   height: 100vh;
   min-height: -webkit-fill-available; /* Fallback untuk iOS */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .animate-scroll-text {
