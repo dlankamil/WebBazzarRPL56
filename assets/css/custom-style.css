@@ -1,14 +1,51 @@
+/* Custom ScrollBar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(230, 35, 16, .5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(230, 35, 16, .7);
+}
+
+html {
+  scrollbar-width: thin; /* Mengatur lebar scrollbar */
+  scrollbar-color: rgb(230, 35, 16, 0.5) #fff; /* Warna thumb dan track */
+}
+
+html::-moz-scrollbar {
+  width: 10px;
+}
+
+html::-moz-scrollbar-thumb {
+  background-color: rgb(230, 35, 16, 0.5);
+}
+
+html::-moz-scrollbar-thumb:hover {
+  background-color: rgb(230, 35, 16, 0.7);
+}
+
+/* Button back to top style */
 #btn-to-top.show {
   opacity: 1;
   visibility: visible;
 }
 
+/* Backgroud image custom */
 .bg-vh {
   height: 100vh;
   min-height: -webkit-fill-available; /* Fallback untuk iOS */
   /* overflow: hidden; */
 }
 
+/* animation scroll text */
 .animate-scroll-text {
   animation: animate-scroll-text linear forwards;
   animation-timeline: view();
@@ -26,10 +63,7 @@
   }
 }
 
-/* .product-main:hover .animate-scroll-product:not(:hover) {
-  
-} */
-
+/* animation scroll product */
 .animate-scroll-product {
   animation: animate-scroll-product linear forwards;
   animation-timeline: view();
@@ -49,4 +83,9 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* hide 'Dilindungi oleh reCAPTCHA' */
+.grecaptcha-badge {
+  visibility: hidden;
 }

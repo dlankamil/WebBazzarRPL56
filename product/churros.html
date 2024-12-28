@@ -23,6 +23,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdY_acqAAAAAP4ev1PNzrc3h5xKKdPqBdQIU22e"></script>
+
 </head>
 <body class="bg-white">
     <!-- Button back to top -->
@@ -141,7 +143,7 @@
                             <br>                    
                             Yuk tunggu apalagi? mari order produk kami pada contach person dibawah ini 👇🏻</p>
                         <div class="flex relative py-5">
-                            <a href="https://me-qr.com/50RZNJbL" class="relative flex items-center h-14 px-6 py-2 font-semibold rounded-xl bg-[#44af35] transition-all hover:bg-[#009bd9] text-white text-lg tracking-wider animate-bounce">
+                            <a href="javascript:void(0)" onclick="sendWhatsApp(event)" class="relative flex items-center h-14 px-6 py-2 font-semibold rounded-xl bg-[#44af35] transition-all hover:bg-[#009bd9] text-white text-lg tracking-wider animate-bounce">
                                 <img src="../assets/images/wa-icon.png" alt="" class="w-8"> &nbsp; <span>Beli / Bertanya</span>
                             </a>
                         </div>
@@ -173,6 +175,27 @@
             </span>
         </div>
     </section>
+
+    <script>
+        function sendWhatsApp(e) {
+            e.preventDefault();
+            grecaptcha.enterprise.ready(async () => {
+                try {
+                    const token = await grecaptcha.enterprise.execute('6LdY_acqAAAAAP4ev1PNzrc3h5xKKdPqBdQIU22e', {action: 'LOGIN'});
+                    if (token) {
+                        const base64Number = "bWUtcXIuY29tLzUwUlpOSmJM";
+
+                        const number = atob(base64Number);
+
+                        const whatsappUrl = `https://${number}`;
+                        window.open(whatsappUrl, '_blank');
+                    }
+                } catch (error) {
+                    alert("Error with reCAPTCHA: " + error.message);
+                }
+            });
+        }
+    </script>
 
     <script src="../assets/js/backToTop.js"></script>
     <script src="../assets/js/sound.js"></script>
