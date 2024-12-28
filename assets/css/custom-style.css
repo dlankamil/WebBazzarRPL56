@@ -84,8 +84,3 @@ html::-moz-scrollbar-thumb:hover {
     transform: translateY(0);
   }
 }
-
-/* hide 'Dilindungi oleh reCAPTCHA' */
-.grecaptcha-badge {
-  visibility: hidden;
-}
