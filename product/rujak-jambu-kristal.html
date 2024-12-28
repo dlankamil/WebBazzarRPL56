@@ -171,22 +171,25 @@
         function sendWhatsApp(e) {
             e.preventDefault();
             grecaptcha.enterprise.ready(async () => {
-                try {
-                    const token = await grecaptcha.enterprise.execute('6LdY_acqAAAAAP4ev1PNzrc3h5xKKdPqBdQIU22e', {action: 'LOGIN'});
-                    if (token) {
-                        const base64Number = "NjI4MjEyMjY1MTU0Mg==";
-                        const base64Message = "SGFsbywlMjBuYW1hJTIwc2F5YSUyMC4uLiwlMjBrZWxhcyUyMC4uLiUyMGluZ2luJTIwbWVtZXNhbiUyMHJ1amFrJTIwamFtYnUlMjBrcmlzdGFsJTIwLi4uJTIwcGNzJTIwLi4uJTIwLyUyMGJlcnRhbnlhJTIwLi4uJTIw";
+    try {
+        const token = await grecaptcha.enterprise.execute('6LdY_acqAAAAAP4ev1PNzrc3h5xKKdPqBdQIU22e', {action: 'login'});
+        console.log("reCAPTCHA Token: ", token);  // Menampilkan token di konsol
+        if (token) {
+            // Lanjutkan ke proses WhatsApp
+            const base64Number = "NjI4MjEyMjY1MTU0Mg==";
+            const base64Message = "SGFsbywlMjBuYW1hJTIwc2F5YSUyMC4uLiwlMjBrZWxhcyUyMC4uLiUyMGluZ2luJTIwbWVtZXNhbiUyMHJ1amFrJTIwamFtYnUlMjBrcmlzdGFsJTIwLi4uJTIwcGNzJTIwLi4uJTIwLyUyMGJlcnRhbnlhJTIwLi4uJTIw";
 
-                        const number = atob(base64Number);
-                        const message = atob(base64Message);
+            const number = atob(base64Number);
+            const message = atob(base64Message);
 
-                        const whatsappUrl = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-                        window.open(whatsappUrl, '_blank');
-                    }
-                } catch (error) {
-                    alert("Error with reCAPTCHA: " + error.message);
-                }
-            });
+            const whatsappUrl = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    } catch (error) {
+        console.error("Error with reCAPTCHA:", error);  // Menampilkan error jika ada masalah
+        alert("Error with reCAPTCHA: " + error.message);
+    }
+});
         }
     </script>
 
